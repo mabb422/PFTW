@@ -12,8 +12,14 @@ function draw() {
 function draw() {
     if (mouseIsPressed) {
         fill(229, 178, 241);
+        stroke(229, 160, 241);
     } else {
         fill(100,15,100);
+        stroke(80,15,80);
     }
-        triangle(50,mouseY,mouseX,mouseY,mouseX,50)
+        triangle(mouseY,mouseY,mouseY,mouseX,mouseX,mouseY)
+        strokeWeight(4);
     }  
+    
+  
+    
