@@ -1,12 +1,11 @@
 let grid = undefined;
+let stroke1 = prompt ("Pick a number 1-10", "5");
 let fill1 = prompt ("enter a basic color name in lowercase", "lightblue");
 let fill2 = prompt ("enter another basic color name in lowercase", "brown");
 function setup() {
   createCanvas(1000, 1000);
   background(225, 225, 225)
 }
-
-
 function draw() {
     // background
     // scene 
@@ -50,7 +49,35 @@ function draw() {
     line(425, 615, 400, 800)
     line(405, 760, 605, 760)
     line(605, 760, 630, 740)
-
+    // SNOWCREATURE1
+    // base
+    fill(255)
+    strokeWeight(2)
+    ellipse(800, 277, 50)
+    ellipse(800, 237, 30)
+    ellipse(800, 210, 20)
+    // hat
+    fill(fill1)
+    stroke(fill2)
+    triangle(790, 205, 810, 205, 800, 180)
+    line(797, 190, 810, 205)
+    line(795, 198, 810, 205)
+    ellipse(800, 175, 10)
+    //scarf
+    quad(810, 220, 815, 220, 820, 245, 815, 250);  
+    rect(790, 220, 25, 7)
+    // buttons
+    fill(0)
+    stroke(0)
+    ellipse(800, 235, 5)
+    ellipse(800, 245, 5)
+    // eyes
+    ellipse(805, 210, 5)
+    ellipse(795, 210, 5)
+    // nose
+    fill(255, 187, 0)
+    stroke(255, 187, 0)
+    triangle(800, 212, 800, 216, 810, 214)
     // BERNIE
     // head and hair
     fill(255, 255, 255);
@@ -62,7 +89,8 @@ function draw() {
     // ears
     ellipse(405, 200, 20, 40);
     ellipse(595, 200, 20, 40);
-    // mask fill(fill1);
+    // mask 
+    fill(fill1);
     quad(425, 215, 575, 215, 560, 290, 440, 290);   
     arc(500, 235, 90, 5, radians(180), 0)
     arc(500, 260, 90, 5, 0, radians(180))
@@ -71,9 +99,14 @@ function draw() {
     // eyes
     line(440, 200, 490, 200);
     line(510, 200, 560, 200);
+    //  eyebrows
+    stroke(50, 50, 50)
+    strokeWeight(stroke1)
     line(440, 180, 490, 190);
     line(510, 190, 560, 180);
     // body
+    stroke(0)
+    strokeWeight(1)
     fill(92, 92, 92)
     quad(400, 300, 600, 300, 650, 500, 350, 500);
     rect(400, 500, 200, 60);
@@ -112,8 +145,8 @@ function draw() {
     beginShape()
     vertex(510, 450)
     vertex(485, 440)
-    vertex(415, 450)
-    vertex(395, 510)
+    vertex(405, 460)
+    vertex(395, 495)
     vertex(440, 520)
     vertex(500, 490)
     vertex(510, 500)
@@ -141,4 +174,4 @@ function draw() {
     ellipse(550, 465, 10)
     ellipse(565, 450, 10)
     ellipse(580, 435, 10)
-}   
+} 
