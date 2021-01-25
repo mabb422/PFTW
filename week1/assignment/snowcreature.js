@@ -3,14 +3,47 @@ let fill1 = prompt ("enter a basic color name in lowercase", "lightblue");
 let fill2 = prompt ("enter another basic color name in lowercase", "brown");
 function setup() {
   createCanvas(1000, 1000);
+  background(225, 225, 225)
 }
 
 
 function draw() {
-    // background
+      // background
+  // scene
+  
+  // floor
+  strokeWeight(1)
+  fill(200, 200, 200);
+  rect(0, 600, 1000, 400)
+  // counters
+  fill(189, 164, 83);
+  rect(0, 300, 250, 300)
+  rect(750, 300, 250, 300)
+  rect(250, 400, 500, 200)
+  //countertop
+  fill(50, 50, 50);
+  rect(0, 300, 260, 25)
+  rect(740, 300, 260, 25)
+  rect(240, 400, 520, 25)
+  // sign
+  fill(255);
+  rect(25, 25, 300, 150)
+  line(50, 50, 50, 150)
+  arc(50, 50, 100, 100, HALF_PI, 0);
+  
+  // chair
+  fill(0)
+  stroke(0);
+  strokeWeight(10)
+  quad(400, 550, 640, 550, 600, 625, 400, 625);
+  line(640, 500, 600, 800);
+  line(600, 600, 650, 800)
+  line(425, 615, 400, 800)
+  line(405, 760, 605, 760)
+  line(605, 760, 630, 740)
 
     // BERNIE
-    // bernie head
+    // head and hair
     fill(255, 255, 255);
     stroke(0);
     strokeWeight(1)
