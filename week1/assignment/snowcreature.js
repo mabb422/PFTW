@@ -8,39 +8,48 @@ function setup() {
 
 
 function draw() {
-      // background
-  // scene
-  
-  // floor
-  strokeWeight(1)
-  fill(200, 200, 200);
-  rect(0, 600, 1000, 400)
-  // counters
-  fill(189, 164, 83);
-  rect(0, 300, 250, 300)
-  rect(750, 300, 250, 300)
-  rect(250, 400, 500, 200)
-  //countertop
-  fill(50, 50, 50);
-  rect(0, 300, 260, 25)
-  rect(740, 300, 260, 25)
-  rect(240, 400, 520, 25)
-  // sign
-  fill(255);
-  rect(25, 25, 300, 150)
-  line(50, 50, 50, 150)
-  arc(50, 50, 100, 100, HALF_PI, 0);
-  
-  // chair
-  fill(0)
-  stroke(0);
-  strokeWeight(10)
-  quad(400, 550, 640, 550, 600, 625, 400, 625);
-  line(640, 500, 600, 800);
-  line(600, 600, 650, 800)
-  line(425, 615, 400, 800)
-  line(405, 760, 605, 760)
-  line(605, 760, 630, 740)
+    // background
+    // scene 
+    // floor
+    strokeWeight(1)
+    stroke(0)
+    fill(200, 200, 200);
+    rect(0, 600, 1000, 400)
+    // counters
+    fill(189, 164, 83);
+    rect(0, 300, 250, 300)
+    rect(750, 300, 250, 300)
+    rect(250, 400, 500, 200)
+    //countertop
+    fill(50, 50, 50);
+    rect(0, 300, 260, 25)
+    rect(740, 300, 260, 25)
+    rect(240, 400, 520, 25)
+    // sign
+    fill(255);
+    strokeWeight(10)
+    rect(25, 25, 300, 150)
+    // D
+    line(50, 50, 50, 150)
+    arc(50, 100, 100, 100, radians(270), radians(450));
+    // M
+    line(125, 50, 125, 150)
+    line(125, 50, 165, 100)
+    line(165, 100, 200, 50)
+    line(200, 50, 200, 150)
+    // V
+    line(225, 50, 265, 150)
+    line(265, 150, 305, 50)
+    // chair
+    fill(0)
+    stroke(0);
+    strokeWeight(10)
+    quad(400, 550, 640, 550, 600, 625, 400, 625);
+    line(640, 500, 600, 800);
+    line(600, 600, 650, 800)
+    line(425, 615, 400, 800)
+    line(405, 760, 605, 760)
+    line(605, 760, 630, 740)
 
     // BERNIE
     // head and hair
@@ -111,4 +120,25 @@ function draw() {
     vertex(520, 475)
     vertex(510, 450)
     endShape()
+    // mitt1 decor1
+    fill(255, 254, 250)
+    stroke(26, 44, 44)
+    strokeWeight(1)
+    ellipse(460, 500, 10)
+    ellipse(445, 485, 10)
+    ellipse(430, 470, 10)
+    //mitt2 decor1
+    ellipse(525, 445, 10)
+    ellipse(540, 430, 10)
+    ellipse(555, 415, 10)
+    // mitt1 decor2
+    fill(26, 44, 44);
+    stroke(255, 254, 250)
+    ellipse(485, 485, 10)
+    ellipse(470, 470, 10)
+    ellipse(455, 455, 10)
+    //mitt2 decor2
+    ellipse(550, 465, 10)
+    ellipse(565, 450, 10)
+    ellipse(580, 435, 10)
 }   
