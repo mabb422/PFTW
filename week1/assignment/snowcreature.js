@@ -8,6 +8,26 @@ function setup() {
 }
 function draw() {
     background(220);
+    // bernie the snowman
+    // head and hair
+    arc(500, 200, 200, 200, radians(180), 0)
+    ellipse(500, 200, 175, 200);
+    //ears
+    ellipse(405, 200, 20, 40);
+    ellipse(595, 200, 20, 40);
+    //face
+    quad(425, 215, 575, 215, 560, 290, 440, 290);
+    line(440, 200, 490, 200);
+    line(510, 200, 560, 200);
+    line(440, 180, 490, 190);   
+    line(510, 190, 560, 180);
+  
+//body
+quad(400, 300, 600, 300, 650, 500, 350, 500);
+    
+
+
+    // snowman
     // snowman legs
     fill("#f1f1f1");
     stroke(stroke1);
