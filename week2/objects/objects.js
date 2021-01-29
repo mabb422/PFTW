@@ -8,7 +8,7 @@ const myGames = [{
     shortDescription: "Do Math. Move Pegs. Ruthelessly steal points if your house rules allow it"
     },
     {
-    game: "Trivial Persuit", 
+    game: "Trivial Pursuit", 
     gameType: "board game", 
     maxPlayers: 6, 
     bestToken: "purple", 
