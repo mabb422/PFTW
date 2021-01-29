@@ -19,7 +19,7 @@ const myGames = [{
     gameType: "board game", 
     maxPlayers: 8, 
     bestToken: "Scottie Dog", 
-    shortDescription: "Buy Properties. Build a Hotel Empire. Collect $200. Ruin Friendships"
+    shortDescription: "Buy Properties. Build a Hotel Empire. Collect $200. Ruin Friendships."
     },
     {
     game: "Gin Rummy", 
