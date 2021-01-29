@@ -7,3 +7,5 @@ let myArr = [
     "Spaceballs"
 ];
 console.log(myArr);
+myArr.push(movies);
+console.log(myArr.toString());
