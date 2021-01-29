@@ -5,7 +5,7 @@ const myGames = [{
     gameType: "card game", 
     maxPlayers: 3, 
     bestToken: "the darkest pegs available", 
-    shortDescription: "Do Math. Move Pegs. Ruthelessly steal points if your house rules allow it"
+    shortDescription: "Do Math. Move Pegs. Ruthelessly steal points if your house rules allow it."
     },
     {
     game: "Trivial Pursuit", 
