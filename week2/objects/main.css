@@ -1,0 +1,16 @@
+html{
+    box-sizing: border-box;
+  }
+*, 
+*:before, 
+*:after{
+    box-sizing: inherit;
+  }
+body {
+    background-color: #d2fff0;
+    color: rgb(23, 51, 47);
+    text-align: center;
+    padding-top: 2rem;
+    font-size: xx-large;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+  } 
