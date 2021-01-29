@@ -7,10 +7,10 @@ html{
     box-sizing: inherit;
   }
 body {
-    background-color: #d2fff0;
-    color: rgb(23, 51, 47);
+    background-color: rgb(253, 255, 119);;
+    color: rgb(0, 100, 139);
     text-align: center;
     padding-top: 2rem;
     font-size: xx-large;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: 'Courier New', Courier, monospace;
   } 
