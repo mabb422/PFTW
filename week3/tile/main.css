@@ -1,0 +1,16 @@
+html{
+    box-sizing: border-box;
+  }
+*, 
+*:before, 
+*:after{
+    box-sizing: inherit;
+  }
+body {
+    background-color: rgb(253, 255, 119);;
+    color: rgb(0, 100, 139);
+    text-align: center;
+    padding-top: 2rem;
+    font-size: x-large;
+    font-family: 'Courier New', Courier, monospace;
+  } 
