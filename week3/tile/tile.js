@@ -1,8 +1,8 @@
 function setup() {
     createCanvas(200, 200);
-  }
-  
-  function draw() {
+    noLoop();
+}
+function draw() {
     //background
     fill(100, 30, 100)
     rect(0, 0, 200, 200);
@@ -46,4 +46,7 @@ function setup() {
     circle(100, 100, 30)
     noFill()
     rect(10, 10, 180, 180)
-  }
+}
+function draw() {
+    createTile();
+}
