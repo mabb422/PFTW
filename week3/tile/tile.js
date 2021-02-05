@@ -2,7 +2,8 @@ function setup() {
     createCanvas(200, 200);
     noLoop();
 }
-function draw() {
+function createTile() {
+    translate(0,0);
     //background
     fill(100, 30, 100)
     rect(0, 0, 200, 200);
@@ -50,3 +51,4 @@ function draw() {
 function draw() {
     createTile();
 }
+  
