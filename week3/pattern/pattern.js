@@ -50,12 +50,12 @@ function createTile(originX, originY, primaryColor, secondColor, laserWeight) {
 }
 function draw() {
     createTile(0, 0, "purple", "greenyellow", 10);
-    createTile(0, 200, "lightblue", "magenta", 10);
+    createTile(0, 200, "gray", "magenta", 10);
     createTile(0, 200, "pink", "aqua", 15);
     createTile(200, -400, "lightblue", "magenta", 10);
     createTile(0, 200, "purple", "greenyellow", 20);
     createTile(0, 200, "lightblue", "magenta", 10);
     createTile(200, -400, "pink", "aqua", 15);
-    createTile(0, 200, "lightblue", "magenta", 10);
+    createTile(0, 200, "gray", "magenta", 10);
     createTile(0, 200, "purple", "greenyellow", 10);
 }
