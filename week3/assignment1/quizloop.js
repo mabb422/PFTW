@@ -19,6 +19,21 @@ function next() {
     const randomIndex = Math.ceil(Math.random() * statements.length - 1);
     return statements[randomIndex];
 }
+function checkQuestion() {
+    if (currentQuestion.answer === input.value()) {
+        //remove correct answer from array
+        statements = statements.filter(statementObj => {
+            return currentQuestion.answer!== statementObj.answer;
+        });
+        //correct condition
+        response = 'Correct! Next Riddle:';
+        responseColor = 'green'
+    } else {
+        //wrong condition
+        response = 'Sorry, that is incorrect. Lets try another one:';
+        responseColor = 'red'
+    }
+}
 let currentQuestion = next();
 let message = currentQuestion.question;
 function setup() {
@@ -37,6 +52,8 @@ function draw() {
     fill('purple');
     textSize (24);
     text(message, 100, 300);
+    fill(reposnseColor);
+    text(response, 100, 350);
 }
 const question = window.prompt(quizOptions[randomIdx].question);
 window.alert('You answered ' + question + '. The correct answer is ' + quizOptions[randomIdx].answer + ".")
