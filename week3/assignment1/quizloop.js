@@ -10,7 +10,6 @@ let statements = [
     { question: 'What goes up and down the stairs without ever moving?', answer: 'carpet'},
     { question: 'What has no hinges, lock, or lid, but inside a golden treasure is hid?', answer: 'an egg'},
     { question: 'What follows you wherever you go, but the more of me you take, the more you leave behind?', answer: 'footsteps'},
-
 ];
 function next() {
     if(statements.length < 1) {
