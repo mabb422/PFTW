@@ -4,6 +4,12 @@ let response;
 let responseColor;
 let statements = [
     { question: 'What runs around the whole yard without ever moving?', answer: 'a fence'},
+    { question: 'What can you catch but never throw?', answer: 'a cold'},
+    { question: 'What travels around the world without ever leaving the corner?', answer: 'a stamp'},
+    { question: 'What has many eyes, yet cannot see?', answer: 'potatoes'},
+    { question: 'What goes up and down the stairs without ever moving?', answer: 'carpet'},
+    { question: 'What has no hinges, lock, or lid, but inside a golden treasure is hid?', answer: 'an egg'},
+    { question: 'What follows you wherever you go, but the more of me you take, the more you leave behind?', answer: 'footsteps'},
 
 ];
 function next() {
@@ -15,6 +21,7 @@ function next() {
     return statements[randomIndex];
 }
 function checkQuestion() {
+    
     if (currentQuestion.answer === questionInput.value()) {
         //remove correct answer from array
         statements = statements.filter(statementObj => {
@@ -25,7 +32,7 @@ function checkQuestion() {
         responseColor = 'green';
     } else {
         //wrong condition
-        response = 'Sorry, that is incorrect. Lets try another one:';
+        response = 'That is incorrect. Sorry, try another one:';
         responseColor = 'red';
     }
     currentQuestion = next();
@@ -34,6 +41,12 @@ function checkQuestion() {
         message = currentQuestion.question;
     }
 }
+// start over
+function startOver () {
+    location.reload();
+    return;
+}
+
 let currentQuestion = next();
 let message = currentQuestion.question;
 function setup() {
