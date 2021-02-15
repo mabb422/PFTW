@@ -2,18 +2,18 @@
 const rectWidth = 200;
 const rectHeight = 250;
 let rectX = 25;
-let rectY = 25;
+let rectY = 150;
 let myRect = [];
 let startingId = 0;
 function setup() {
-    createCanvas(1100, 1100);
-    background('lightblue');
+    createCanvas(1100, 1200);
+    background(218, 241, 255);
     //start grid
     for (let k = 0; k < 4; k++){
         for (let i = 0; i < 5; i++ ) {
             rect(rectX, rectY, rectWidth, rectHeight);
             myRect.push({ x: rectX, y: rectY, id: startingId});
-            rectX += 210; //position of new rect's X
+            rectX += 211; //position of new rect's X
             startingId++; 
         }
         rectX = 25;
