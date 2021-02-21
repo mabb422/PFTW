@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Peralta&display=swap');
+
+html{
+    box-sizing: border-box;
+  }
+*, 
+*:before, 
+*:after{
+    box-sizing: inherit;
+  }
+body {
+    background-color: rgb(218, 241, 255);
+    color: black;
+    text-align: center;
+    padding-top: 1rem;
+  } 
+  h1 {
+      font-size: 3rem;
+      font-family: 'Peralta', cursive;
+      color: rgb(238, 78, 78);
+  }
+
