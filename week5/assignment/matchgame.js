@@ -12,7 +12,11 @@ let startingX = 25;
 let startingY = 50;
 let cards = [];
 const gameState = {
-
+    totalPairs: 9,
+    flippedCards: [],
+    numMatched: 0,
+    attempts: 0,
+    waiting: false
 };
 let cardFaceArray = [];
 let cardBack;
@@ -32,7 +36,7 @@ function preload () {
 }
 function setup() {
     createCanvas(900, 600);
-    background(218, 241, 255);
+    //background(218, 241, 255);
 //set faces to different images
     let selectedFaces = [];
     for (let z = 0; z < 9; z++) {
@@ -47,8 +51,8 @@ function setup() {
 //start of grid
     for (let k = 0; k < 3; k++) {
         for (let i = 0; i < 6; i++ ) {
-            const faceImage = selectedFaces.pop();
-            cards.push(new Card(startingX, startingY, faceImage));
+            const cardFaceImg = selectedFaces.pop();
+            cards.push(new Card(startingX, startingY, cardFaceImg));
             startingX += 145;
             //rect(rectX, rectY, rectWidth, rectHeight);
             //myRect.push({ x: rectX, y: rectY, id: startingId});
@@ -63,15 +67,63 @@ function setup() {
     //console.log(myRect); 
     //myCard = new Card();
 }
+
+function draw() {
+    background(218, 241, 255);
+    if (gameState.numMatched === gameState.totalPairs) {
+        fill('yellow');
+        textSize(66);
+        text('You Win!', 300, 300);
+        noLoop();
+    }
+    for (let a = 0; a < cards.length; a++) {
+        if(!cards[a].isMatch) {
+            cards[a].face = DOWN;
+        }
+        cards[a].show();
+    }
+    noLoop();
+    gameState.flippedCards.length = 0;
+    gameState.waiting = false;
+    fill(0);
+    textSize(24);
+    text('Attempts: ' + gameState.attempts, 200, 20);
+    text('Matches: ' + gameState.numMatched, 500, 20);
+}
+
 //identify which card is clicked/console output
 function mousePressed() {
+    if(gameState.waiting) {
+        return;
+    }
     for(let j = 0; j < cards.length; j++) {
-        if(cards[j].didHit(mouseX, mouseY)) { 
+        //first check flipped cards length, and then we can trigger the flip
+        if(gameState.flippedCards.length < 2 && cards[j].didHit(mouseX, mouseY)) { 
             console.log('flipped', cards[j]);
+            gameState.flippedCards.push(cards[j]);
     //    let distance = dist(mouseX, mouseY, myRect[j].x, myRect[j].y);
     //if (distance < rectWidth / 2) {
     //    console.log('Card has been clicked', myRect[j].id);
-    }}
+        }
+    }
+    if (gameState.flippedCards.length == 2) {
+        if (gameState.flippedCards[0].cardFaceImg === gameState.flippedCards[1].cardFaceImg) {
+            //following conditions are for a match:
+            //mark cards as matched so they dont flip back over
+            gameState.flippedCards[0].isMatch = true;
+            gameState.flippedCards[1].isMatch = true;
+            //empty flipped cards array
+            gameState.flippedCards.length = 0;
+            //incrememnt the score
+            gameState.numMatched++;
+        } else {
+            gameState.waiting = true;
+            const loopTimeout = window.setTimeout(() => {
+                loop();
+                window.clearTimeout(loopTimeout);
+            }, 1000)
+        }
+    }
 }
 class Card {
     constructor(x, y, cardFaceImg) {
@@ -81,19 +133,19 @@ class Card {
         this.height = 167;
         this.face = DOWN;
         this.cardFaceImg = cardFaceImg;
+        this.isMatch = false;
         this.show();
     }
 
     show() {
-        if (this.face === DOWN) {
-            stroke(0);
-            fill('white');
-            rect(this.x, this.y, this.width, this.height);
-            image(cardBack, this.x, this.y)
-        } else {
-            fill('#aaa');
+        if (this.face === UP || this.isMatch) {
+            fill(0);
             rect(this.x, this.y, this.width, this.height);
             image(this.cardFaceImg, this.x, this.y)
+        } else {
+            fill(255);
+            rect(this.x, this.y, this.width, this.height);
+            image(cardBack, this.x, this.y);
         }
 
     }
