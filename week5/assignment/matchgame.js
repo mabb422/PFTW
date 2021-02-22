@@ -1,10 +1,3 @@
-//setup
-//const rectWidth = 200;
-//const rectHeight = 250;
-//let rectX = 25;
-//let rectY = 150;
-//let myRect = [];
-//let startingId = 0;
 let myCard;
 const DOWN = 'down';
 const UP = 'up';
@@ -36,7 +29,6 @@ function preload () {
 }
 function setup() {
     createCanvas(900, 600);
-    //background(218, 241, 255);
 //set faces to different images
     let selectedFaces = [];
     for (let z = 0; z < 9; z++) {
@@ -54,18 +46,10 @@ function setup() {
             const cardFaceImg = selectedFaces.pop();
             cards.push(new Card(startingX, startingY, cardFaceImg));
             startingX += 145;
-            //rect(rectX, rectY, rectWidth, rectHeight);
-            //myRect.push({ x: rectX, y: rectY, id: startingId});
-            //rectX += 211; //position of new rect's X
-            //startingId++; 
         }
         startingY += 180;
         startingX = 25;
-        //rectX = 25;
-        //rectY += 260; //position of new rect's Y
     }
-    //console.log(myRect); 
-    //myCard = new Card();
 }
 
 function draw() {
@@ -101,9 +85,6 @@ function mousePressed() {
         if(gameState.flippedCards.length < 2 && cards[j].didHit(mouseX, mouseY)) { 
             console.log('flipped', cards[j]);
             gameState.flippedCards.push(cards[j]);
-    //    let distance = dist(mouseX, mouseY, myRect[j].x, myRect[j].y);
-    //if (distance < rectWidth / 2) {
-    //    console.log('Card has been clicked', myRect[j].id);
         }
     }
     if (gameState.flippedCards.length == 2) {
