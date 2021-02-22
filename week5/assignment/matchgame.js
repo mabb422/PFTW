@@ -9,25 +9,52 @@ let myCard;
 const DOWN = 'down';
 const UP = 'up';
 let startingX = 25;
-let startingY = 150;
+let startingY = 50;
 let cards = [];
 const gameState = {
 
 };
+let cardFaceArray = [];
+let cardBack;
+function preload () {
+    cardBack = loadImage('images/cardback.png');
+    cardFaceArray = [
+        loadImage('images/cardbrady.png'),
+        loadImage('images/cardbruce.png'),
+        loadImage('images/cardfonz.png'),
+        loadImage('images/cardgil.png'),
+        loadImage('images/cardjean.png'),
+        loadImage('images/cardlucy.png'),
+        loadImage('images/cardmork.png'),
+        loadImage('images/cardthrees.png'),
+        loadImage('images/cardtrek.png'),
+    ]
+}
 function setup() {
-    createCanvas(1100, 1200);
+    createCanvas(900, 600);
     background(218, 241, 255);
-    //start grid
-    for (let k = 0; k < 4; k++) {
-        for (let i = 0; i < 5; i++ ) {
-            cards.push(new Card(startingX, startingY));
-            startingX += 211;
+//set faces to different images
+    let selectedFaces = [];
+    for (let z = 0; z < 9; z++) {
+        const randomIdx = floor(random(cardFaceArray.length));
+        const face = cardFaceArray[randomIdx];
+        selectedFaces.push(face);
+        selectedFaces.push(face);
+//remove used cardface so there's only 2 of each
+        cardFaceArray.splice(randomIdx, 1);
+    }
+//start of grid
+    for (let k = 0; k < 3; k++) {
+        for (let i = 0; i < 6; i++ ) {
+            const faceImage = selectedFaces.pop();
+            cards.push(new Card(startingX, startingY, faceImage));
+            startingX += 145;
             //rect(rectX, rectY, rectWidth, rectHeight);
             //myRect.push({ x: rectX, y: rectY, id: startingId});
             //rectX += 211; //position of new rect's X
             //startingId++; 
         }
-        startingY += 261;
+        startingY += 180;
         startingX = 25;
         //rectX = 25;
         //rectY += 260; //position of new rect's Y
@@ -38,20 +65,21 @@ function setup() {
 //identify which card is clicked/console output
 function mousePressed() {
     for(let j = 0; j < cards.length; j++) {
-        if(cards[j].didHit(mouseX, mouseY)) {
-            console.log('flipped');
+        if(cards[j].didHit(mouseX, mouseY)) { 
+            console.log('flipped', cards[j]);
     //    let distance = dist(mouseX, mouseY, myRect[j].x, myRect[j].y);
     //if (distance < rectWidth / 2) {
     //    console.log('Card has been clicked', myRect[j].id);
     }}
 }
 class Card {
-    constructor(x, y) {
+    constructor(x, y, cardFaceImg) {
         this.x = x;
         this.y = y;
-        this.width = 200;
-        this.height = 250;
+        this.width = 133;
+        this.height = 167;
         this.face = DOWN;
+        this.cardFaceImg = cardFaceImg;
         this.show();
     }
 
@@ -60,9 +88,11 @@ class Card {
             stroke(0);
             fill('white');
             rect(this.x, this.y, this.width, this.height);
+            image(cardBack, this.x, this.y)
         } else {
             fill('#aaa');
             rect(this.x, this.y, this.width, this.height);
+            image(this.cardFaceImg, this.x, this.y)
         }
 
     }
