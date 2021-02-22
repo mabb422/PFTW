@@ -2,7 +2,7 @@ let myCard;
 const DOWN = 'down';
 const UP = 'up';
 let startingX = 25;
-let startingY = 50;
+let startingY = 150;
 let cards = [];
 const gameState = {
     totalPairs: 9,
@@ -28,19 +28,19 @@ function preload () {
     ]
 }
 function setup() {
-    createCanvas(900, 600);
-//set faces to different images
+    createCanvas(900, 700);
+    //set faces to different images
     let selectedFaces = [];
     for (let z = 0; z < 9; z++) {
         const randomIdx = floor(random(cardFaceArray.length));
         const face = cardFaceArray[randomIdx];
         selectedFaces.push(face);
         selectedFaces.push(face);
-//remove used cardface so there's only 2 of each
+        //remove used cardface so there's only 2 of each
         cardFaceArray.splice(randomIdx, 1);
     }
     selectedFaces = shuffleArray(selectedFaces);
-//start of grid
+    //start grid
     for (let k = 0; k < 3; k++) {
         for (let i = 0; i < 6; i++ ) {
             const cardFaceImg = selectedFaces.pop();
@@ -57,7 +57,8 @@ function draw() {
     if (gameState.numMatched === gameState.totalPairs) {
         fill(238, 78, 78);
         textSize(100);
-        text('You Win!', 300, 300);
+        textFont('Peralta');
+        text('You Win!', 250, 115);
         noLoop();
     }
     for (let a = 0; a < cards.length; a++) {
@@ -71,7 +72,7 @@ function draw() {
     gameState.waiting = false;
     fill(0);
     textSize(24);
-    text('Attempts: ' + gameState.attempts, 225, 20);
+    text('Attempts: ' + gameState.attempts, 250, 20);
     text('Matches: ' + gameState.numMatched, 500, 20);
 }
 
@@ -80,6 +81,7 @@ function mousePressed() {
     if(gameState.waiting) {
         return;
     }
+    //start loop for all cards
     for(let j = 0; j < cards.length; j++) {
         //first check flipped cards length, and then we can trigger the flip
         if(gameState.flippedCards.length < 2 && cards[j].didHit(mouseX, mouseY)) { 
@@ -87,7 +89,7 @@ function mousePressed() {
             gameState.flippedCards.push(cards[j]);
         }
     }
-    if (gameState.flippedCards.length == 2) {
+    if (gameState.flippedCards.length === 2) {
         gameState.attempts++;
         if (gameState.flippedCards[0].cardFaceImg === gameState.flippedCards[1].cardFaceImg) {
             //following conditions are for a match:
@@ -98,6 +100,7 @@ function mousePressed() {
             gameState.flippedCards.length = 0;
             //incrememnt the score
             gameState.numMatched++;
+            loop();
         } else {
             gameState.waiting = true;
             const loopTimeout = window.setTimeout(() => {
