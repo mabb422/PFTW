@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=RocknRoll+One&display=swap');
+
 html{
     box-sizing: border-box;
   }
@@ -6,5 +8,11 @@ html{
 *:after{
     box-sizing: inherit;
   }
-
+body{
+    font-family: RocknRoll One;
+    background-color: lightcoral;
+}
+li{
+    
+}
 

@@ -1,60 +1,60 @@
 new Vue({
-    el: "",
+    el: "glama",
     data: {
-      message: ""
+      message: "The scientific name for a llama is the 'Lama Glama'."
     }
 });
 new Vue({
-    el: "",
+    el: "peru",
     data: {
-      message: ""
+      message: "The llama is the national symbol of Peru, where wild populations are particularly prominent."
     }
 });
 new Vue({
-    el: "",
+    el: "history",
     data: {
-      message: ""
+      message: "Over 3 million years ago Llamas were native to North American plains, but gradually migrated to South American mountains."
     }
 });
 new Vue({
-    el: "",
+    el: "baby",
     data: {
-      message: ""
+      message: "A baby llama is called a 'cria'."
     }
 });
 new Vue({
-    el: "",
+    el: "family",
     data: {
-      message: ""
+      message: "Llamas are highly social animals, and care for other llamas in their family group of up to around 20 llamas."
     }
 });
 new Vue({
-    el: "",
+    el: "guard",
     data: {
-      message: ""
+      message: "Llamas make good guard animals for sheep herds because they alert and protect the herd when they spot predators."
     }
 });
 new Vue({
-    el: "",
+    el: "age",
     data: {
-      message: ""
+      message: "Llamas can live to be 20-30 years old."
     }
 });
 new Vue({
-    el: "",
+    el: "fur",
     data: {
-      message: ""
+      message: "Short coated llamas are called Ccara and medium coated llamas are called Curaca"
     }
 });
 new Vue({
-    el: "",
+    el: "wild",
     data: {
-      message: ""
+      message: "Llamas have two wild camelid cousins that have never been domesticated: the vicuña (closely related to alpacas) and the guanaco."
     }
 });
 new Vue({
-    el: "",
+    el: "mn",
     data: {
-      message: ""
+      message: "There is a llama farm in Waconia MN where you can visit llamas, do a llama summer camp, or throw a llama birthday party."
     }
 });
