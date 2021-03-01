@@ -10,9 +10,21 @@ html{
   }
 body{
     font-family: RocknRoll One;
-    background-color: lightcoral;
+    background-color: rgb(178, 238, 186);
 }
+h1{
+    font-size: 3rem;
+    padding-top: 2rem;
+    text-align: center;
+}
+#meme{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2rem;
+  }
 li{
-    
+    padding-top: 20px;
+    list-style-type: none;
 }
 
