@@ -8,5 +8,8 @@ html{
 *:after{
     box-sizing: inherit;
   }
-
+body{
+    background-color: rgb(194, 235, 194);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
 

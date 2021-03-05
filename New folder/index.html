@@ -9,7 +9,11 @@
   </head>
 
   <body>
-    <h1>Llamas vs Alpacas</h1>
+    <div id="llamalpaca" v-cloak>
+        <h1 v-bind:style="headstyle">Llamas vs Alpacas</h1>
+        <img src="alpaca.jpg" width=300 alt="alpacas in bowties">
+        <p><a v-bind:href="alpaca">Alpacas</a> have small, blunt faces with short ears, while <a v-bind:href="llama">Llamas</a> have more-elongated faces with banana-sized ears.</p>
+    </div>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
     <script src="llamalpaca.js"></script>
   </body>
