@@ -70,10 +70,10 @@ const vm = new Vue({
                 generation: '',
                 collected: false
             };
-        }
+        },
         deleteItem: item => {
             vm.consoles = vm.consoles.filter (console => {return console !== item;
-            })
+            });
         }
     }
 });
