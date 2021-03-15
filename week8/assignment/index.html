@@ -25,7 +25,7 @@
             <div class="cell collected">{{console.collected}}</div>
         </div>
     </div>
-    <form v-on:submit="tbdfunction">
+    <form v-on:submit="submitHandler">
       <fieldset>
         <legend>Add a console to the collection</legend>
         <div>
@@ -48,6 +48,7 @@
           <label for="collected">Owned</label>
           <input id="collected" type="checkbox" v-model=newConsoleObj.collected>
         </div>
+        <button type="submit">Submit</button>
       </fieldset>
     </form>
    </div>

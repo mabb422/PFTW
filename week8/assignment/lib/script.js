@@ -1,6 +1,14 @@
 const vm = new Vue({
     el: '#app',
     data: {
+        newConsoleObj:{
+            manufactuer: '',
+            name: '',
+            releaseDate: null,
+            image: '',
+            generation: '',
+            collected: false
+        },
         consoles: [
             {
                 manufactuer: 'Atari',
@@ -46,5 +54,11 @@ const vm = new Vue({
                 collected: true
             }
         ]
+    },
+    methods: {
+        submitHandler: () => {
+            console.log('submitted');
+            vm.consoles = vm.consoles.concat(vm.newConsoleObj);
+        }
     }
 });
