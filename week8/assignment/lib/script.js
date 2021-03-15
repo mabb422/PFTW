@@ -59,6 +59,21 @@ const vm = new Vue({
         submitHandler: () => {
             console.log('submitted');
             vm.consoles = vm.consoles.concat(vm.newConsoleObj);
+            vm.resetForm();
+        },
+        resetForm: () => {
+            vm.newConsoleObj = {
+                manufactuer: '',
+                name: '',
+                releaseDate: null,
+                image: '',
+                generation: '',
+                collected: false
+            };
+        }
+        deleteItem: item => {
+            vm.consoles = vm.consoles.filter (console => {return console !== item;
+            })
         }
     }
 });
