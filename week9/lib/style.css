@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+[v-cloak] {
+  display: none;
+}
+* {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-size: 16px;
+}
+h1,
+h2,
+h3 {
+  font-size: 24px;
+  font-family: 'JetBrains Mono', 'Courier New', Courier, monospace;
+}
+body {
+  background-color: #aff0e2;
+  width: 100%;
+  max-width: 1080px;
+  margin: 0 auto;
+}
+h1{
+  padding: 25px 10px;
+}
+.collectionWrapper {
+  display: flex;
+  flex-direction: column;
+}
+.collectionRow {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #e9fffb;
+  border-bottom: 1px solid #e9fffb;
+}
+.collectionRow.odd {
+  background-color: #b5ccc7
+}
+.collectionRow.header {
+  background-color: #fff;
+}
+.collectionRow.owned {
+  color: maroon;
+  font-weight: 600;
+}
+
+.cell {
+  padding: 10px;
+  width: 120px;
+  text-align: center;
+}
+.console-image img {
+  display: block;
+  max-width: 160px;
+}
