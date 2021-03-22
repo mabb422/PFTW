@@ -10,14 +10,27 @@
    <h1>Video Game Consoles (collected and not collected)</h1>
    <div id="app">
     <div class="collectionWrapper">
-            <div class="collectionRow header">
-                    <div class="cell console-manufactuer">Manufactuer</div>
-                    <div class="cell console-name">Console Name</div>
-                    <div class="cell release-date">Console Release Date</div>
-                    <div class="cell console-image">Image</div>
-                    <div class="cell collected">Part of the collection</div>
-                    <div class="cell actions">Actions</div>
-                </div>
+        <div class="collectionRow header">
+          <div class="cell console-manufactuer">Manufactuer</div>
+          <div class="cell console-name">Console Name</div>
+          <div class="cell release-date">Console Release Date</div>
+          <div class="cell console-image">Image</div>
+          <div class="cell collected">Part of the collection</div>
+<!--      <div class="cell actions">Actions</div>  -->  
+        </div>
+
+<!--list items pull here-->
+        <div class="collectionRow" v-for="console in consoles" v-cloak>
+          <console-coms
+            v-bind:manufactuer="console.manufactuer"
+            v-bind:name="console.name"
+            v-bind:releaseDate="console.releaseDate"
+            v-bind:image="console.image"
+            v-bind:collected="console.collected"
+          ></console-coms>
+        </div>
+
+<!-- Old notation
         <div class="collectionRow" v-for="(console, index) in consoles" v-bind:class="{odd: index % 2 !== 0, owned: console.collected}">
             <div class="cell console-manufactuer">{{console.manufactuer}}</div>
             <div class="cell console-name">{{console.name}}</div>
@@ -26,8 +39,9 @@
             <div class="cell collected">{{console.collected}}</div>
             <div class="cell actions">
               <button type='button' v-on:click="deleteItem(console)">Delete</button>
+            </div>
         </div>
-    </div>
+-->
     <form v-on:submit="submitHandler">
       <fieldset>
         <legend>Add a console to the collection</legend>

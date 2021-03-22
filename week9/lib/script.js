@@ -1,3 +1,14 @@
+Vue.component('console-coms', {
+    template: `<div v-bind:class="row">
+          <div class="cell console-manufactuer">{{manufactuer}}</div>
+          <div class="cell console-name">{{name}}</div>
+          <div class="cell release-date">{{releaseDate}}</div>
+          <div class="cell console-image"><img v-bind:src="image" class="list__data-image"></div>
+          <div class="cell collected">{{collected}}</div>
+         </div>`,
+    props: ['manufactuer', 'name', 'releaseDate', 'image', 'collected']
+  });
+
 const vm = new Vue({
     el: '#app',
     data: {
@@ -71,9 +82,9 @@ const vm = new Vue({
                 collected: false
             };
         },
-        deleteItem: item => {
-            vm.consoles = vm.consoles.filter (console => {return console !== item;
-            });
-        }
+//        deleteItem: item => {
+//            vm.consoles = vm.consoles.filter (console => {return console !== item;
+//           });
+//        }
     }
 });
