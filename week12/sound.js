@@ -9,9 +9,9 @@ function preload() {
 }
 
 function setup() {
-    let cnv = createCanvas(500, 500)
-    cnv.mousePressed(canvasPressed);
+    createCanvas(500, 500);
     amplitude = new p5.Amplitude();
+    mySound.play();
 }
 
 function draw() {
@@ -19,12 +19,15 @@ function draw() {
     stroke('magenta');
     noFill();
     ellipse(250,250,100,100);
-    level = mySound.getLevel()
-    var diameterX = level + 2500
-    var diameterY = level + 2500 * random (1.5)
-    ellipse(circleX, circleY, diameterX, diameterY)
+    level = mySound.getLevel();
+    var diameterX = level * 250;0
+    var diameterY = level * 2500 * random (1.5);
+    ellipse(circleX, circleY, diameterX, diameterY);
 }
 
 function canvasPressed() {
-    mySound.play();
-}
+    if (sound.isPlaying() === true) {
+        sound.pause();
+      } else {
+        sound.play();
+}}
