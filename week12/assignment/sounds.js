@@ -23,4 +23,12 @@ function preload() {
     thundery = loadSound('thunder2.wav');
 }
 
-canvas = createCanvas(1000, 1000);
+function setup() {
+    canvas = createCanvas(1000, 1000);
+    button1 = createButton(wind);
+    button2 = createButton(windy);
+    button3 = createButton(rain);
+    button4 = createButton(rainy);
+    button5 = createButton(thunder);
+    button6 = createButton(thundery);
+}
