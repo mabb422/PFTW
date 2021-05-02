@@ -58,7 +58,7 @@ function setup() {
 
 function draw() {
     background(100);
-    fill(255, 255, 255);
+    fill('bluegray');
 }
 function playWind () {
     wind.play();
