@@ -26,21 +26,56 @@ function preload() {
 function setup() {
     canvas = createCanvas(1000, 1000);
     button1 = createButton(wind);
-    button.position(100, 200);
-    button.size(200, 200);
+    button1.position(100, 200);
+    button1.size(200, 200);
+    button1.mousePressed(playWind);
+//
     button2 = createButton(windy);
-    button.position(400, 200);
-    button.size(200, 200);
+    button2.position(400, 200);
+    button2.size(200, 200);
+    button2.mousePressed(playWindy);
+//
     button3 = createButton(rain);
-    button.position(100, 200);
-    button.size(200, 200);
+    button3.position(100, 200);
+    button3.size(200, 200);
+    button3.mousePressed(playRain);
+//
     button4 = createButton(rainy);
-    button.position(100, 500);
-    button.size(200, 200);
+    button4.position(100, 500);
+    button4.size(200, 200);
+    button4.mousePressed(playRainy);
+//
     button5 = createButton(thunder);
-    button.position(400, 500);
-    button.size(200, 200);
+    button5.position(400, 500);
+    button5.size(200, 200);
+    button5.mousePressed(playThunder);
+//
     button6 = createButton(thundery);
-    button.position(700, 500);
-    button.size(200, 200);
+    button6.position(700, 500);
+    button6.size(200, 200);
+    button6.mousePressed(playThundery);
 }
+
+function draw() {
+    background(100);
+    fill(255, 255, 255);
+}
+function playWind () {
+    wind.play();
+}
+function playWindy () {
+    windy.play();
+}
+function playRain () {
+      rain.play();
+}
+function playRainy () {
+    rainy.play();
+}
+function playThunder () {
+    thunder.play();
+}
+function playThundery () {
+    thundery.play();
+}
+
