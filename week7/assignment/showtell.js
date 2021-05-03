@@ -1,5 +1,5 @@
 let vm = new Vue({
-    el: "#myCollection"
+    el: "#myCollection",
     data: {
         art: [
             {
