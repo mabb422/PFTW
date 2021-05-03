@@ -10,6 +10,26 @@
 
   <body>
     <h1>Calculator</h1>
+    <div id="calcApp" class="container">
+      <form>
+          <div>
+              <input v-model.number="firstNum" type="number" placeholder="first number">
+              <select v-model="operation">
+                  <option value="add">+</option>
+                  <option value="subtract">-</option>
+                  <option value="multiply">&#215;</option>
+                  <option value="divide">&divide;</option>
+              </select>
+              <input v-model.number="secondNum" type="number" placeholder="second number">
+          </div>
+          <button v-on:click="calculate(firstNum, secondNum)" type="button">Calculate</button>
+      </form>
+      <div class="total">
+        Operation: {{operation}}<br>
+        Total: <strong>{{total}}</strong>
+      </div>
+
+  </div>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
     <script src="calculator.js"></script>
   </body>

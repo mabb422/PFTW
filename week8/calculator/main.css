@@ -1,0 +1,16 @@
+html{
+    box-sizing: border-box;
+}
+*, 
+*:before, 
+*:after{
+    box-sizing: inherit;
+  }
+body{
+    background-color: lavenderblush;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.container{
+    border: 3px solid rgb(255, 215, 228);
+    padding: 25px;
+}
