@@ -1,0 +1,36 @@
+<!doctype html>
+
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <title>Final</title>
+ </head>
+
+ <body>
+    <h1>The Family Tree</h1>
+    <div id="app">
+     <div class="collectionWrapper">
+             <div class="collectionRow header">
+                     <div class="cell person-name">Name</div>
+                     <div class="cell person-image">Image</div>
+                     <div class="cell person-title">Title</div>
+                     <div class="cell person-parents">Child of</div>
+                     <div class="cell person-children">Parent to</div>
+                     <div class="cell person-about">About</div>
+                 </div>
+         <div class="collectionRow" v-for="(person, index) in people">
+             <div class="cell person-name">{{person.name}}</div>
+             <div class="cell person-image"><img :src="person.image" :alt="console.name" /></div>
+             <div class="cell person-title">{{person.title}}</div>
+             <div class="cell person-parents">{{person.parents}}</div>
+             <div class="cell person-children">{{person.children}}</div>
+             <div class="cell person-about">{{person.about}}</div>
+          </div>
+     </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="tree.js"></script>
+   </body>
+ </html>
