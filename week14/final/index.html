@@ -14,20 +14,24 @@
      <div class="collectionWrapper">
              <div class="collectionRow header">
                      <div class="cell person-name">Name</div>
+                     <div class="cell person-lifespan">Lifespan</div>
                      <div class="cell person-image">Image</div>
                      <div class="cell person-title">Title</div>
                      <div class="cell person-parents">Child of</div>
                      <div class="cell person-children">Parent to</div>
                      <div class="cell person-about">About</div>
                  </div>
-         <div class="collectionRow" v-for="(person, index) in people">
-             <div class="cell person-name">{{person.name}}</div>
-             <div class="cell person-image"><img :src="person.image" :alt="console.name" /></div>
-             <div class="cell person-title">{{person.title}}</div>
-             <div class="cell person-parents">{{person.parents}}</div>
-             <div class="cell person-children">{{person.children}}</div>
-             <div class="cell person-about">{{person.about}}</div>
-          </div>
+                 <div class="collectionRow" v-for="person in people" v-cloak>
+                    <family-member
+                      v-bind:name="person.name"
+                      v-bind:lifespan="person.lifespan"
+                      v-bind:image="person.image"
+                      v-bind:title="person.title"
+                      v-bind:parents="person.parents"
+                      v-bind:children="person.children"
+                      v-bind:about="person.about"
+                    ></family-member>
+                  </div>
      </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
