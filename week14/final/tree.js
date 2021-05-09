@@ -86,9 +86,9 @@ const vm = new Vue({
                 title: 'Prince, King of the Andals, the Rhoynar, and the First Men, Lord of the Seven Kingdoms (AKA The Prince that was Promised)',
                 parents: 'Rhaegar Targaryen and Elia Martell',
                 children: 'None',
-                about: 'A comet was seen above Kings Landing on the night Aegon was conceived, which led his father Rhaegar, Prince of Dragonstone, to believe that Aegon was the prince that was promised. The comet was seen as the bleeding star of the prophecy. He was killed during the Sack of Kings landing during Roberts Rebellion.'
+                about: 'A comet was seen above Kings Landing on the night Aegon was conceived, which led his father Rhaegar, Prince of Dragonstone, to believe that Aegon was the prince that was promised. The comet was seen as the bleeding star of the prophecy. He was killed during the Sack of Kings landing during Roberts Rebellion, although in the book series he may be alive as Young Griff.'
             }, {
-                name: 'John Snow (Aegon Targaryen)',
+                name: 'John Snow (also Aegon Targaryen)',
                 lifespan: '283 A.C. - present',
                 image: '',
                 title: 'Lord Commander of the Nights Watch (AKA Lord Snow, Ser Allisers Bane, The Snow of Winterfell, The crow-come-over, The Bastard of Winterfell, Lord Crow, The Black Bastard of the Wall',
