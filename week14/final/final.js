@@ -3,9 +3,9 @@
 Vue.component('scam-detail', {
     template: `<div v-bind:class="row">
           <div class="cell scam-name">{{name}}</div>
-          <div class="cell scam-scammer">{{scammer}}</div>
-          <div class="cell scam-how">{{how}}</div>
-          <div class="cell scam-flags">{{flags}}</div>
+          <div class="cell scam-scammer"><div class="category-name">Scammer Profile: </div>{{scammer}}</div>
+          <div class="cell scam-how"><div class="category-name">How It Works: </div>{{how}}</div>
+          <div class="cell scam-flags"><div class="category-name">Red Flags: </div>{{flags}}</div>
           </div>`,
     props: ['name', 'scammer', 'how', 'flags']
   });
