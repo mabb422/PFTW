@@ -2,15 +2,12 @@
 //Vue with Data inputs - based on weeks 7-9 activity
 Vue.component('scam-detail', {
     template: `<div v-bind:class="row">
-          <div class="cell person-name">{{name}}</div>
-          <div class="cell person-lifespan">{{lifespan}}</div>
-          <div class="cell person-image"><img v-bind:src="image" class="list__data-image"></div>
-          <div class="cell person-title">{{title}}</div>
-          <div class="cell person-parents">{{parents}}</div>
-          <div class="cell person-children">{{children}}</div>
-          <div class="cell person-about">{{about}}</div>
-         </div>`,
-    props: ['name', 'lifespan', 'image', 'title', 'parents', 'children', 'about']
+          <div class="cell scam-name">{{name}}</div>
+          <div class="cell scam-scammer">{{scammer}}</div>
+          <div class="cell scam-how">{{how}}</div>
+          <div class="cell scam-flags">{{flags}}</div>
+          </div>`,
+    props: ['name', 'scammer', 'how', 'flags']
   });
 
 const vm = new Vue({
@@ -18,85 +15,50 @@ const vm = new Vue({
     data: {
     scams: [
             {
-                name: 'Aerys Targaryen',
-                lifespan: '244 A.C. - 283 A.C.',
-                image: '',
-                title: 'Aerys Targaryen the Second of His Name, Ser Prince of Dragonstone King of the Andals, the Rhoynar, and the First Men Lord of the Seven Kingdoms Protector of the Realm (AKA The Mad King, or King Scab)',
-                parents: 'Siblings Prince Jaehaerys & Princess Shaera',
-                children: 'Rhaegar (w. Elia Martell, Lyanna Stark), Shaena, Daeron, Aegon, Jaehaerys, Viserys, and Daenerys (h. Khal Drogo',
-                about: 'The seventeenth and last member of the Targaryen dynasty to sit the Iron Throne, ruling from 262 AC to 283 AC. His only children that lived to adulthood by his sister/wife, Rhaella, were Rhaegar, Viserys, and Daenerys Targaryen. Aerys showed great promise at the start of his reign, bringing peace and prosperity to the Seven Kingdoms, but later descended into insanity. His paranoia and cruelty grew out of control. He was eventually killed by a member of his own Kingsguard, Ser Jaime Lannister, during Roberts Rebellion.'
+                name: 'Loan Scam',
+                scammer: 'The Scammer poses as a Loan Officer from a legitimate (or legitimate sounding, but fake) bank or loan issuer.',
+                how: 'The victim will either find the supposed loan company through an online search, or will be approached by someone (usually online) about being qualified for a loan. Once the scammer thinks they have the victim convinced, they will ask for bank acount, or online banking details (login, password, account/routing numbers, etc). The scammer will either mail a chack or do a mobile deposit to the victims account, but tell the victim there is an error or their credit score was not high enough. The victim is asked to send the money back via wire, gift cards, moneygram, or electronic money transfers (e.g. cashapp, zelle).',
+                flags: 'Spelling/grammar errors in communications, pushy behaviors, anything seems too good to be true, issuer asks for mobile banking passwords, issuer asks for money to be returned via a third party (banks do this internally when actually necessary), issuer requests funds be sent to a third party, issuer asks for gift cards',
             }, {
-                name: 'Rhaella Targaryen',
-                lifespan: '245 or 246 A.C. - 284 A.C.',
-                image: '',
-                title: 'Princess Queen, later Dowager Queen',
-                parents: 'Siblings Prince Jaehaerys & Princess Shaera',
-                children: 'Rhaegar (w. Elia Martell, Lyanna Stark), Shaena, Daeron, Aegon, Jaehaerys, Viserys, and Daenerys (h. Khal Drogo)',
-                about: 'Rhaella was married at a young age to her older brother, Aerys, on the command of their father, Prince Jaehaerys. Jaehaerys had been influenced by a woods witch brought to court by Jenny of Oldstones. The woods witch prophesied that the prince that was promised would be born from Aerys and Rhaellas line, making Jaehaerys determined to marry his daughter to his son. King Aegon V Targaryen, whilst frustrated with his sons decision, allowed Jaehaerys to do as he wished. There was no fondness between Aerys and Rhaella on the day of their wedding.'
+                name: 'Msystery Shopper Scam',
+                scammer: 'The scammer poses as an employer for mystery shopping positions.',
+                how: 'The victim will either find the employer with an internet search or will be approached by someone online for a mystery shopper job. Once "hired", the victim is mailed a check and instructions to deposit it and keep part "as payment", but withdraw the rest for the job. They are then instructed to either puchase gift cards to send back to the scammer, or asked to do a money transfer (via moneygram, western union, walmart money tranfer, USPS) under the guise of evaluating the stores process for this.',
+                flags: 'Spelling/grammar errors in communications, pushy behaviors, employment/payment seems too good to be true, issuer asks for money transfers via a third party, issuer requests gift cards, an employer is never met in person for an interview or otherwise.',
             }, {
-                name: 'Rhaegar Targaryen',
-                lifespan: '259 A.C. - 283 A.C.',
-                image: '',
-                title: 'Prince of Dragonstone (AKA The Silver Prince, The Dragon Prince, The Last Dragon, The Prince that was Promised)',
-                parents: 'Siblings King Aerys & Rhaella Targaryen',
-                children: 'Rhaenys & Aegon Targaryen (mother Elia Martell), and Aegon Targaryen (AKA John Snow, mother Lyanna Stark)',
-                about: 'Prince Rhaegar Targaryen was the firstborn son of King Aerys II Targaryen and his sister/wife, Queen Rhaella. As heir-apparent, he was the Prince of Dragonstone and crown prince for the Iron Throne. Rhaegar was popular with the smallfolk during his lifetime, but he died in Roberts Rebellion which was triggered in part by his supposed abduction of Lyanna Stark. He was slain in single combat by Robert Baratheon at the ruby ford during the Battle of the Trident. Rhaegar was the elder brother of the exiled last members of House Targaryen, Prince Viserys and Princess Daenerys.'
+                name: 'Personal Assistant Scam',
+                scammer: 'The Scammer poses as a business person hiring a personal assistant, typically with an unexpectedly high wage.',
+                how: 'The victim will either find the supposed position with an internet search or will be approached by someone online for a job as a personal assistant. Once "hired", the scammer sends the victim a check and asks them to either buy giftcards or do money transfers to either puchase supplies for their position, or pay someone else on behalf of the supposed employer.',
+                flags: 'Spelling/grammar errors in communications, pushy behaviors, employment/payment seems too good to be true, issuer asks for money transfers via a third party, issuer requests gift cards, an employer is never met in person for an interview or otherwise.',
             }, {
-                name: 'Viserys Targaryen',
-                lifespan: '276 A.C. - 298 A.C.',
-                image: '',
-                title: 'King of the Andals, the Rhoynar, and the First Men (claimant) Lord of the Seven Kingdoms (claimant) Protector of the Realm (claimant) Prince of Dragonstone',
-                parents: 'Siblings King Aerys & Rhaella Targaryen',
-                children: 'None',
-                about: 'Prince Viserys Targaryen[9] is the heir of his father, King Aerys II Targaryen, following the death of his older brother, Prince Rhaegar, during Roberts Rebellion. The war turned Viserys and his younger sister, Daenerys, Princess of Dragonstone, into exiles from the Seven Kingdoms who can only plot to regain control of the Iron Throne. He styles himself as Viserys of the House Targaryen, the Third of his Name, King of the Andals, the Rhoynar, and the First Men, Lord of the Seven Kingdoms and Protector of the Realm. In the Free Cities Viserys was mockingly dubbed The Beggar King, a name which spread towards the Seven Kingdoms.'
+                name: 'Romance Scam',
+                scammer: 'The Scammer is a catfish, and poses as anyone they create or choose, usually someone rich and attractive, and has job or other excuse to explain being very busy and/or abroad.',
+                how: 'The victim is approached on social media or a dating site by someone interested in dating them. Scammers will make themselves look like an attractive dating prosepect, and over time create an entirely fake relationship with believing victims. They will eventaully say they have been cut off from their accounts from some reason, and ask for money for any number of reasons (e.g. they or a family member are ill, they are stuck in another state country, they are dealing with inheritance issues). In this scam they will either mail a check for the victim to deposit and send money back to them, although sometimes they dont need to mail a fake check and just promise to pay the victim back once they are able to access their accounts. The victim is often to emotioanlly invested to see red flags and wants to support their supposed partner. Although there are countless variations, this is how the "Nigerian Prince Scam" works.',
+                flags: 'Spelling/grammar errors in communications, pushy behaviors, anything seems too good to be true, romantic partner always has an excuse they cannot call/video-chat/visit and never meets the possible victim in person, romantic partner asks for money to be sent abroad, partner requests buying/sending gift cards.',
             }, {
-                name: 'Daenerys Targaryen',
-                lifespan: '298 A.C. - Present (in the book series)',
-                image: '',
-                title: 'Daenerys Stormborn, the Unburnt, Queen of Meereen, Queen of the Andals and the Rhoynar and the First Men, Khaleesi of Great Grass Sea, Breaker of Shackles, and Mother of Dragons, Princess of Dragonstone, Queen of the Seven Kingdoms, Lord of the Seven Kingdoms, Protector of the Realm (AKA Dany, Mhysa, The Silver Queen, Silver Lady, Dragonmother, The Dragon Queen, Breaker of Chains, Bride of Fire, Daughter of Death, Slayer of Lies, Child of Three, Aegon the Conqueror with Teats, Azor Ahai Returned, The Queen Across the Waters)',
-                parents: 'Siblings King Aerys & Rhaella Targaryen',
-                children: 'Rhaego (deceased), Dragons',
-                about: 'Daenerys Targaryen, also known as Daenerys Stormborn, is one of the last confirmed members of House Targaryen, along with her older brother Viserys, who refers to her as Dany. She is the youngest child of King Aerys II Targaryen and his sister-wife, Queen Rhaella. Daenerys given to Dothraki Khal Drogo as his wife, in return for the promise of an army for Viserys to conquer the Iron Throne with. At their wedding, Daenerys receives three petrified dragon eggs, which she later hatches and raises three dragons from. She believes herself to be the true heir to the iron throne. '
+                name: 'Sugar Baby Scam',
+                scammer: 'Similar to romance scams, the scammer poses as someone lonely who is "just looking for someone to spoil".',
+                how: 'The victim is approached online by someone claiming they want to spoil someone. They may ask for bank account and online banking details or might mail a check to the victim. The victim is typically told to keep part and send the remainder to a third party as a favor to their new benefactor.',
+                flags: 'Spelling/grammar errors in communications, pushy behaviors, anything seems too good to be true, benefactor does not want to call/video-chat/visit and does not want to meet Sugar Baby in person, benefactor asks for money to be sent abroad, benefactor requests buying/sending gift cards.',
             }, {
-                name: 'Elia (Martell) Targaryen',
-                lifespan: '256 A.C. - 283 A.C. ',
-                image: '',
-                title: 'Princess',
-                parents: 'Unnamed Royalty of Dorne',
-                children: 'Rhaenys and Aegon Targaryen',
-                about: 'A Dornish princess from House Martell, ELia is the sister of Oran, Mors, Olyvar, and Oberyn Martell. She was married to the crown prince, Rhaegar Targaryen, and by him birthed Rhaenys and Aegon. Elia was assaulted and murdered by Ser Gregor Clegane in the Sack of Kings Landing during Roberts Rebellion.'
+                name: 'Car Wrap, or Decals Scam',
+                scammer: 'The Scammer poses as an employee for a legtimate business looking to hire people to advertize their brand with car decals.',
+                how: 'Similar to the mystery shopper scam, the victim will either find the employer with an internet search or will be approached by someone online. Once "hired", the victim is mailed a check and instructions to deposit it and keep part "as payment", but withdraw the rest to send to the decal shop that will wrap their car, which does not actually exist.',
+                flags: 'Spelling/grammar errors in communications, pushy behaviors, employment/payment seems too good to be true, issuer asks for money transfers via a third party, issuer does not request driving records or background check.',
             }, {
-                name: 'Lyanna (Stark) Targaryen',
-                lifespan: '266 or 267 A.C. - 283 A.C.',
-                image: '',
-                title: 'Princess (AKA The She-Wolf, The Wolf Maid)',
-                parents: 'Rickard and Lyarra Stark',
-                children: 'Aegon Targaryen (AKA John Snow)',
-                about: 'The only daughter of Lord Rickard Stark and his wife, Lady Lyarra Stark. She had two older brothers, Brandon and Eddard, and one younger brother, Benjen. Her supposed abduction by Prince Rhaegar Targaryen was the event that ultimately triggered Roberts Rebellion and led to the downfall of the Targaryen dynasty. According to Eddard, Lyanna had a touch of wildness to her, which was described as "the wolf blood" by her father.'
+                name: 'Prize Winner Scam',
+                scammer: 'The Scammer poses as a representitive of a lottery, contest, or something similar (e.g. Publishers Clearing House).',
+                how: 'The victim is conatcted and told they have won something, but will need to cover taxes or fees from things like shipping or processing to get their winnings. The victim is told theyre being sent a portion of the winnings which they will need to send elsewhere to pay for these taxes/fees. Sometimes no fake check is involved, just the request for money in order to "release winnings" to victims.',
+                flags: 'Spelling/grammar errors in communications, pushy behaviors, anything seems too good to be true, issuer asks for money transfers via a third party, contest/lottery is not something the victim remembers signing up for.',
             }, {
-                name: 'Rhaenys Targaryen',
-                lifespan: '280 A.C. - 283 A.C.',
-                image: '',
-                title: 'Princess',
-                parents: 'Rhaegar Targaryen and Elia Martell',
-                children: 'None',
-                about: 'After her birth, Rhaenys was presented at court by her father. Whilst her grandmother, Queen Rhaella Targaryen, embraced her warmly, her grandfather, King Aerys II Targaryen, refused to touch or hold her, claiming she smelled Dornish. Rhaenys was killed during the Sack of Kings landing during Roberts Rebellion.'
+                name: 'Overpayment Scam',
+                scammer: 'The Scammer poses as a buyer for sales online, such as ebay or craigslist.',
+                how: 'The victim is typically approached online about something they have listed for sale, especially larger items like cars or furniture. The scammer says they cannot pick up the item themselves, and offers to send extra money for the victim to hold the item. The victim is sent a check for way above the sales price, and is instructed to send money to "movers" which the scammer has hired. There are no movers, and their was no intent to actually purchase the item. This scam is sometimes seen with a slight avriation where the product is a rental unit.',
+                flags: 'Spelling/grammar errors in communications, pushy behaviors, anything seems too good to be true, seller is asked to pay mover as opposed to buyer paying them directly.',
             }, {
-                name: 'Aegon Targaryen',
-                lifespan: '281 or 282 A.C. - 283 A.C.',
-                image: '',
-                title: 'Prince, King of the Andals, the Rhoynar, and the First Men, Lord of the Seven Kingdoms (AKA The Prince that was Promised)',
-                parents: 'Rhaegar Targaryen and Elia Martell',
-                children: 'None',
-                about: 'A comet was seen above Kings Landing on the night Aegon was conceived, which led his father Rhaegar, Prince of Dragonstone, to believe that Aegon was the prince that was promised. The comet was seen as the bleeding star of the prophecy. He was killed during the Sack of Kings landing during Roberts Rebellion, although in the book series he may be alive as Young Griff.'
-            }, {
-                name: 'John Snow (also Aegon Targaryen)',
-                lifespan: '283 A.C. - present',
-                image: '',
-                title: 'Lord Commander of the Nights Watch (AKA Lord Snow, Ser Allisers Bane, The Snow of Winterfell, The crow-come-over, The Bastard of Winterfell, Lord Crow, The Black Bastard of the Wall',
-                parents: 'Eddard Stark and Unknown (Later discovered Rhaegar Targaryen and Lyanna Stark)',
-                children: 'None, Dog Dad to Ghost',
-                about: 'Unaware of the identity of his mother, Jon was raised at Winterfell. At the age of fourteen, he joins the Nights Watch, where he earns the nickname Lord Snow.'
+                name: 'Beggar Scam',
+                scammer: 'The Scammer poses as a person in need, often an actual old friend or distant family member, although sometimes they find victims without any relationship.',
+                how: 'The victim may be approached in a number of ways, online or in person. The scammer will often use a fake social media account or someones real social media account they have taken over to pose as an old friend or relative in need. If the victim is approached in person the victim is usually random so they do not pose as a known entity. The scammer will say they do not have access to their accounts, and will ask the victim to cash a check for them, which they say they will let the victim keep part of or reward the victim somehow.',
+                flags: 'Spelling/grammar errors in communications, pushy behaviors, anything seems too good to be true, request comes from someone victim is not extremely close with, request or mannerisms seem uncharactertic of the requestor (or uncharacteristic of their relationship with the victim).',
             }
         ]
     },
