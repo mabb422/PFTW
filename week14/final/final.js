@@ -1,16 +1,6 @@
-//card set-up - based on weeks 4-5 activity
-let myCard;
-const DOWN = 'down';
-const UP = 'up';
-let cardBack;
-function preload () {
-    cardBack = loadImage('images/targaryen.png');
-    
-let cardFaceArray = [];
-
 
 //Vue with Data inputs - based on weeks 7-9 activity
-Vue.component('family-member', {
+Vue.component('scam-detail', {
     template: `<div v-bind:class="row">
           <div class="cell person-name">{{name}}</div>
           <div class="cell person-lifespan">{{lifespan}}</div>
@@ -26,7 +16,7 @@ Vue.component('family-member', {
 const vm = new Vue({
     el: '#app',
     data: {
-        people: [
+    scams: [
             {
                 name: 'Aerys Targaryen',
                 lifespan: '244 A.C. - 283 A.C.',

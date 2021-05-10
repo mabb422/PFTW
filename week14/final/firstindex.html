@@ -1,0 +1,31 @@
+<!doctype html>
+
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <title>Final</title>
+ </head>
+
+ <body>
+    <h1>The Family Tree</h1>
+    <div id="app">
+       <div class="collectionWrapper">
+            <div class="collectionRow" v-for="person in people" v-cloak>
+                <family-member
+                    v-bind:name="person.name"
+                    v-bind:lifespan="person.lifespan"
+                    v-bind:image="person.image"
+                    v-bind:title="person.title"
+                    v-bind:parents="person.parents"
+                    v-bind:children="person.children"
+                    v-bind:about="person.about"
+                ></family-member>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="tree.js"></script>
+   </body>
+ </html>
