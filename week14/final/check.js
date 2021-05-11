@@ -19,7 +19,7 @@ function draw() {
   rect(0, 0, 500, 250);
   noStroke();
 //Check sectors to hover over
-  //contact info
+  //maker/drawer
   fill (a);
   rect(15, 20, 100, 40);
   //check number/date
@@ -69,16 +69,19 @@ function draw() {
   line(300, 200, 480, 200);
 
 //Hover Functions
+//letter variable changes color, fill/stroke/text make verbiage appear
   textSize(15)
+  //maker/drawer
   if((15<mouseX)&&(115>mouseX)&&(20<mouseY)&&(60>mouseY)){
     a = 200;
-    fill(128, 0, 75);
+    fill(128, 0, 75); 
     stroke(128, 0, 75);
     text('Does this name match the person or company sending the check?', 25, 300);
     text('Does it make sense this issuer is printed on the check?', 25, 330);
   } else {
     a = 240 }
   
+  //check number
   if((355<mouseX)&&(485>mouseX)&&(20<mouseY)&&(40>mouseY)){
     b = 200;
     fill(128, 0, 75);
@@ -87,6 +90,7 @@ function draw() {
   } else {
     b = 240 }
   
+  //date
   if((355<mouseX)&&(485>mouseX)&&(40<mouseY)&&(60>mouseY)){
     c = 200;
     fill(128, 0, 75);
@@ -96,6 +100,7 @@ function draw() {
   } else {
     c = 240 }
   
+  //payee
   if((15<mouseX)&&(380>mouseX)&&(80<mouseY)&&(120>mouseY)){
     d = 200;
     fill(128, 0, 75);
@@ -106,6 +111,7 @@ function draw() {
   } else {
     d = 240 }
   
+  //amounts
   if((15<mouseX)&&(485>mouseX)&&(120<mouseY)&&(155>mouseY) || (380<mouseX)&&(495>mouseX)&&(80<mouseY)&&(120>mouseY)){
     e = 200;
     fill(128, 0, 75);
@@ -116,6 +122,7 @@ function draw() {
   } else {
     e = 240 }
   
+  //memo
   if((15<mouseX)&&(205>mouseX)&&(175<mouseY)&&(205>mouseY)){
     f = 200;
     fill(128, 0, 75);
@@ -124,7 +131,8 @@ function draw() {
   } else {
     f = 240 }
   
-    if((295<mouseX)&&(485>mouseX)&&(175<mouseY)&&(205>mouseY)){
+  //signature
+  if((295<mouseX)&&(485>mouseX)&&(175<mouseY)&&(205>mouseY)){
     g = 200;
     fill(128, 0, 75);
     stroke(128, 0, 75);
@@ -133,7 +141,8 @@ function draw() {
     text('Does this area look damaged, erased, or altered?', 25, 360);
   } else {
     g = 240 }
-  
+
+  //sequence line
   if((145<mouseX)&&(340>mouseX)&&(215<mouseY)&&(240>mouseY)){
     h = 200;
     fill(128, 0, 75);

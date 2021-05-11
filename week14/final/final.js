@@ -10,6 +10,7 @@ Vue.component('scam-detail', {
     props: ['name', 'scammer', 'how', 'flags']
   });
 
+//Array of fraud types set-up:
 const vm = new Vue({
     el: '#app',
     data: {

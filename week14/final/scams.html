@@ -10,7 +10,7 @@
  </head>
 
  <body>
-  <header>
+  <header class="nav-bar">
     <h1>Common Check Scams</h1>
     <div class="menu">
         <a class="menu_item" href="index.html">Home</a> |
@@ -20,10 +20,23 @@
   </header>
   <main>
     <p class="description">Every year the FTC recieves tens of thousands of reports about <a href="anatomy.html">fake checks</a>. These are scams where the victim recieves a fake or invalid check which is deposited into their account, money is sent back to the scammer or a third party, and then the check 'bounces' so the victim's account is charged for whatever money they sent. The number is steadily increasing. While scammers will always find new ways to take money, these are the most common fake-check scams. Check out the <a href="https://www.consumer.ftc.gov/articles/how-spot-avoid-and-report-fake-check-scams">FTC website</a> for more information.</p>
+<!-- start of possible menu add later
+        <p>Jump to: <a href></a>
+        <a href="#loan">Loans</a> |
+        <a href="#shopper">Mystery Shoppers</a> |
+        <a href="#assistant">Personal Assistants</a> |
+        <a href="#romance">Romance</a> |
+        <a href="#sugar">Sugar Babies</a> |
+        <a href="#car">Car Decals</a> |
+        <a href="#overpay">Overpayments |</a> |
+        <a href="#beggar">Beggar Scam</a>
+    </p>
+-->
     <div id="app">
        <div class="collectionWrapper">
             <div class="collectionRow" v-for="scam in scams" v-cloak>
                 <scam-detail
+                    v-bind:id="scam.id"
                     v-bind:name="scam.name"
                     v-bind:scammer="scam.scammer"
                     v-bind:how="scam.how"
@@ -33,7 +46,7 @@
         </div>
     </div>
   </main>
-  <footer>
+  <footer class="nav-bar">
     <p class="copyright"><i class="far fa-copyright"></i> mbaddin 2021</p>
     <div class="menu">
         <a class="menu_item" href="index.html">Home</a> |
