@@ -10,22 +10,15 @@
 
  <body>
   <header>
-    <h1>Common Check Scams</h1>
+    <h1>Scam Central</h1>
+    <div class="toolbar">
+        <a class="toolbar_item" href="index.html">Home</a> |
+        <a class="toolbar_item" href="scams.html">Scams</a> |
+        <a class="toolbar_item" href="anatomy.html">Red Flags</a>
+    </div>
   </header>
   <main>
-    <p class="description">Every year the FTC recieves tens of thousands of reports about <a href="scams.html">fake checks</a>. These are scams where the victim recieves a fake or invalid check which is deposited into their account, money is sent back to the scammer or a third party, and then the check 'bounces' so the victim's account is charged for whatever money they sent. The number is steadily increasing. While scammers will always find new ways to take money, these are the most common fake-check scams. Check out the <a href="https://www.consumer.ftc.gov/articles/how-spot-avoid-and-report-fake-check-scams">FTC website</a> for more information.</p>
-    <div id="app">
-       <div class="collectionWrapper">
-            <div class="collectionRow" v-for="scam in scams" v-cloak>
-                <scam-detail
-                    v-bind:name="scam.name"
-                    v-bind:scammer="scam.scammer"
-                    v-bind:how="scam.how"
-                    v-bind:flags="scam.flags"
-                ></scam-detail>
-            </div>
-        </div>
-    </div>
+
   </main>
   <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.2.0/p5.min.js"></script>

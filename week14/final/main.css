@@ -21,10 +21,7 @@ header{
     display: flex;
 }
 h1{
-    min-width: 90%;
-}
-.toolbar{
-    padding-top: 25px;
+    min-width: 80%;
 }
 main{
     background-color: rgb(255, 244, 251);
@@ -37,18 +34,24 @@ main{
 }
 .second-description{
     max-width: 700px;
+    background-color: white;
+    border: 1px solid rgb(128, 0, 75);
+    margin: 0;
+    padding: 100px;
 }
 .collectionWrapper{
     display: flex;
     flex-wrap: wrap;
-    /**flex-direction: column;**/
+}
+.toolbar{
+    padding-top: 25px;
 }
 .collectionRow{
     border: 1px solid rgb(128, 0, 75);
     max-width: 800px;
     margin-bottom: 10px;
     padding: 10px;
-    background-color: rgb(255, 249, 253);
+    background-color: white;
 }
 .cell{
     margin: 0;
@@ -68,4 +71,5 @@ a{
 }
 header a{
     color: white;
+    text-decoration: none;
 }
