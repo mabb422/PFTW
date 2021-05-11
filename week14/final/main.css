@@ -13,21 +13,30 @@ body{
     background-color: rgb(235, 231, 231);
     font-family: 'Antic Slab', 'Lucida Sans', Arial, sans-serif;
 }
+
+/**Header Section**/
 header{
     background-color: rgb(128, 0, 75);
     color: white;
     margin: 0;
     padding: 10px 25px;
     display: flex;
+    justify-content: space-between;
 }
-h1{
-    min-width: 75%;
+header .menu{
+    padding-top: 25px;
+    min-width: 25%;
 }
+h1 {
+    margin: 10;
+}
+
+/**Body**/
 main{
     background-color: rgb(255, 244, 251);
     min-height: 600px;
     margin: 10px;
-    padding: 10px 10px;
+    padding: 10px;
 }
 .description{
     max-width: 800px;
@@ -42,9 +51,6 @@ main{
 .collectionWrapper{
     display: flex;
     flex-wrap: wrap;
-}
-.toolbar{
-    padding-top: 25px;
 }
 .collectionRow,
 .description_home{
@@ -73,6 +79,30 @@ img{
 .category-name{
     font-weight: bold;
 }
+
+/**Footer**/
+footer{
+    background-color: rgb(128, 0, 75);
+    color: white;
+    margin: 0;
+    padding: 10px 10px;
+    display: flex;
+    justify-content: space-between;
+    clear: both;
+    position: relative;
+}
+footer p{
+    text-transform: uppercase;
+}
+footer .menu{
+    min-width: 25%;
+}
+.copyright{
+    padding: 0;
+    margin: 0;
+}
+
+/**Links**/
 a{
    color: rgb(128, 0, 75);
    text-decoration: none;
@@ -80,9 +110,12 @@ a{
 a:hover{
     color: violet;
 }
-header a{
+header a,
+footer a{
     color: white;
 }
+
+/**Buttons**/
 .buttons{
     margin: 10px;
 }
