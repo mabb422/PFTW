@@ -64,5 +64,8 @@ main{
     font-weight: bold;
 }
 a{
+   color: rgb(128, 0, 75);
+}
+header a{
     color: white;
 }
