@@ -18,6 +18,13 @@ header{
     color: white;
     margin: 0;
     padding: 10px 25px;
+    display: flex;
+}
+h1{
+    min-width: 90%;
+}
+.toolbar{
+    padding-top: 25px;
 }
 main{
     background-color: rgb(255, 244, 251);
@@ -27,6 +34,9 @@ main{
 }
 .description{
     max-width: 800px;
+}
+.second-description{
+    max-width: 700px;
 }
 .collectionWrapper{
     display: flex;
@@ -52,4 +62,7 @@ main{
 }
 .category-name{
     font-weight: bold;
+}
+a{
+    color: white;
 }
